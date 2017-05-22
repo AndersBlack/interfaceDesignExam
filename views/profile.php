@@ -5,5 +5,5 @@
  * Date: 22/05/2017
  * Time: 12:15
  */
-
-echo "SUCCESS BITCH";
+$content="success bitch";
+echo $content;
