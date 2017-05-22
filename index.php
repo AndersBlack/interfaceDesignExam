@@ -9,11 +9,19 @@
     <!-- Bootstrap stylesheet -->
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <?php
+    session_start();
     if(isset($_GET['page'])) {
         $view = $_GET['page'];
     }else {
         $view = "login";
     }
+    $user = new stdClass;
+    if (isset($_SESSION["user"]))
+    {
+        $user = $_SESSION["user"];
+    }
+
+
     include_once "views/$view.php";
     ?>
 </head>
