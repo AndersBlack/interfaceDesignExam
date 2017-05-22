@@ -1,10 +1,9 @@
 <?php
-
 /**
  * Created by PhpStorm.
  * User: Velislav
  * Date: 22/05/2017
- * Time: 12:15
+ * Time: 15:42
  */
 
-$content="This is your profile";
+$content = "This is the create events page";
