@@ -14,6 +14,10 @@
     // Report all errors except E_NOTICE
     error_reporting(E_ALL ^ E_NOTICE);
     $user = new stdClass();
+    if (isset($_SESSION["user"]))
+    {
+        $user = $_SESSION["user"];
+    }
     if(isset($_GET['page'])) {
         $view = $_GET['page'];
         $sideview = "sidebar";
@@ -21,20 +25,13 @@
     }else {
         $view = "login";
     }
-
-    if (isset($_SESSION["user"]))
-    {
-        $user = $_SESSION["user"];
-    }
-
-
     include_once "views/$view.php";
     ?>
 </head>
 <body>
 
 <div id="content">
-    <?php echo html_entity_decode($sidecontent); ?>
+    <?php echo $sidebarcode ?>
     <?php echo $content?>
 </div>
 

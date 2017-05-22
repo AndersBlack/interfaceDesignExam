@@ -8,8 +8,8 @@
 // Report all errors except E_NOTICE
 error_reporting(E_ALL ^ E_NOTICE);
 
-$sidebarcode = " <div id=\"wdw-sidebar\">
-        <div id=\"wdw-hello\"><h4>Welcome <?php echo $user->username; ?> </h4></div>
+$sidebarcode = "<div id=\"wdw-sidebar\">
+        <div id=\"wdw-hello\"><h4>Welcome ".$user->username."</h4></div>
         <div id=\"wdw-view-list\">
             <a href=\"\"><h5>All Events</h5></a>
             <a href=\"\"><h5>All Partners</h5></a>
@@ -21,5 +21,4 @@ $sidebarcode = " <div id=\"wdw-sidebar\">
         </div>
     </div>";
 
-$sidecontent = htmlspecialchars($sidebarcode);
 ?>

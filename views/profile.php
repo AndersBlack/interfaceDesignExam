@@ -8,4 +8,4 @@
  */
 
 
-$content=  $user->username;
+$content="";
