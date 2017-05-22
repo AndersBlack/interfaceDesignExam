@@ -4,10 +4,15 @@
     <meta charset="UTF-8">
     <title>AmazingApp</title>
 
+    <!-- Google font -->
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa:300,400,700" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <!-- Our stylesheet -->
     <link rel="stylesheet" type="text/css" href="style/style.css">
     <!-- Bootstrap stylesheet -->
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
     <?php
     session_start();
 
@@ -30,8 +35,10 @@
 </head>
 <body>
 
+<?php echo $sidebarcode ?>
+
 <div id="content">
-    <?php echo $sidebarcode ?>
+
     <?php echo $content?>
 </div>
 

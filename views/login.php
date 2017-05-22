@@ -28,12 +28,14 @@ if(isset($_GET["username"], $_GET["password"]))
 }
 
 $content =
-    "<div class=\"wdw-login\">
+    "<div id=\"wdw-login-master\">
+<div class=\"wdw-login\">
     <form method=\"get\">
-        <input type=\"text\" name=\"username\" id=\"lbl-username\" placeholder=\"username\">
-        <input type=\"text\" name=\"password\" id=\"lbl-password\" placeholder=\"password\">
-        <input type=\"submit\" id=\"btn-login-submit\" value=\"Log in\">
+        <input type=\"text\" name=\"username\" id=\"lbl-username\" class=\"form-control\" placeholder=\"username\">
+        <input type=\"text\" name=\"password\" id=\"lbl-password\" class=\"form-control\" placeholder=\"password\">
+        <input type=\"submit\" id=\"btn-login-submit\" class=\"btn btn-primary\" value=\"Login\">
     </form>
+    </div>
     </div>";
 
 
