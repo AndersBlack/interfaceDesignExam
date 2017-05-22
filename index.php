@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Login</title>
+    <title>AmazingApp</title>
 
     <!-- Our stylesheet -->
     <link rel="stylesheet" type="text/css" href="style/style.css">
@@ -19,6 +19,9 @@
 </head>
 <body>
 
+<div id="content">
+    <?php echo $content?>
+</div>
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>

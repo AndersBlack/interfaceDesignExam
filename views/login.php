@@ -11,5 +11,7 @@ $content =
     <form method=\"get\">
         <input type=\"text\" id=\"lbl-username\" placeholder=\"username\">
         <input type=\"text\" id=\"lbl-password\" placeholder=\"password\">
-        <input type=\"submit\" id=\"btn-login-submit\" value=\"Log in\">
+        <input type=\"submit\" id=\"btn-login-submit\" value=\"Log In\">
     </form>";
+
+
