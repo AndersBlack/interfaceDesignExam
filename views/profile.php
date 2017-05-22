@@ -6,4 +6,3 @@
  * Time: 12:15
  */
 $content="success bitch";
-echo $content;
