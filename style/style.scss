@@ -43,7 +43,7 @@ h1, h5, h4, h3, h2, p {
   margin-right: 10px;
 }
 
-.wdw-event-img img {
+.event-img img {
   height: 220px;
   width: 220px;
 }
@@ -63,7 +63,7 @@ h1, h5, h4, h3, h2, p {
   margin-left: 10px;
 }
 
-.events {
+.wdw-events {
   display: flex;
 }
 
@@ -73,11 +73,12 @@ h1, h5, h4, h3, h2, p {
   margin-top: 30px;
   height: auto;
   padding: 3px;
-  border: #01243b 1.5px solid;
 }
 
-.wdw-event-info {
+.event-info {
   padding: 5px;
+  border-right: #01243b 1.5px solid;
+  border-left: #01243b 1.5px solid;
 }
 
 .wdw-login-text {
