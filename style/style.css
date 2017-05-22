@@ -1,5 +1,6 @@
 #content {
   display: flex;
+  flex-direction: column;
   height: 100vh;
   width: 85%;
   background-color: whitesmoke;
@@ -16,7 +17,7 @@
 h1, h2, h3, h4, h5, p {
   color: #01243b !important; }
 
-h5, h4, h3, h2, p {
+h1, h5, h4, h3, h2, p {
   font-family: 'Comfortaa', cursive !important; }
 
 #wdw-view-list {
@@ -27,6 +28,7 @@ h5, h4, h3, h2, p {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   height: 100vh;
   width: 100%; }
 
@@ -34,21 +36,44 @@ h5, h4, h3, h2, p {
   margin-right: 10px; }
 
 .wdw-event-img img {
-  width: 100%; }
+  height: 220px;
+  width: 220px; }
+
+.filters {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  align-items: center; }
+
+.filters div {
+  margin-right: 10px;
+  margin-left: 10px; }
+
+.events {
+  display: flex; }
 
 .event {
   width: 230px;
   margin-left: 30px;
   margin-top: 30px;
-  height: 500px;
+  height: auto;
   padding: 3px;
   border: #01243b 1.5px solid; }
 
 .wdw-event-info {
   padding: 5px; }
 
+.wdw-login-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
 .wdw-login form {
   display: flex;
-  align-items: center; }
+  align-items: center;
+  justify-content: center;
+  flex-direction: row; }
 
 /*# sourceMappingURL=style.css.map */

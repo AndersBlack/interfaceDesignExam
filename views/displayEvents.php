@@ -28,7 +28,7 @@ function displayAllEvents($ajEvents){
     {
         $event .= "<div class='event'>
         <div class='wdw-event-img'>
-            <img src='$jEvent->image' alt='event image'>
+            <img src='$jEvent->image' class='img-circle' alt='event image'>
         </div>
         <div class='wdw-event-info'>
             <div>

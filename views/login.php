@@ -29,12 +29,17 @@ if(isset($_GET["username"], $_GET["password"]))
 
 $content =
     "<div id=\"wdw-login-master\">
+<div class=\"wdw-login-text\">
+    <h1>Welcome to Anvil</h1>
+    <h5>The best event system in town!</h5>
+</div>
 <div class=\"wdw-login\">
     <form method=\"get\">
         <input type=\"text\" name=\"username\" id=\"lbl-username\" class=\"form-control\" placeholder=\"username\">
         <input type=\"text\" name=\"password\" id=\"lbl-password\" class=\"form-control\" placeholder=\"password\">
         <input type=\"submit\" id=\"btn-login-submit\" class=\"btn btn-primary\" value=\"Login\">
     </form>
+    </div>
     </div>
     </div>";
 
