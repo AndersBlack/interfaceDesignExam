@@ -14,20 +14,22 @@
         $view = $_GET['page'];
     }else {
         $view = "login";
+        $sideview = "sidebar";
     }
-    $user = new stdClass;
+
     if (isset($_SESSION["user"]))
     {
         $user = $_SESSION["user"];
     }
 
-
+    include_once "views/$sideview.php";
     include_once "views/$view.php";
     ?>
 </head>
 <body>
 
 <div id="content">
+    <?php echo html_entity_decode($sidecontent); ?>
     <?php echo $content?>
 </div>
 

@@ -1,4 +1,22 @@
-*{
-  margin:0;
-  padding:0;
+#content {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  background-color: whitesmoke;
+}
+
+#wdw-sidebar {
+  height: 100%;
+  padding: 20px;
+  box-shadow: 5px 0px 5px #888888;
+  border-right: #01243b 1.5px solid;
+}
+
+h1, h2, h3, h4, h5, p {
+  color: #01243b !important;
+}
+
+#wdw-view-list{
+  margin-top: 100px;
+  margin-bottom: 100px;
 }
