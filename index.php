@@ -12,9 +12,9 @@
     session_start();
     if(isset($_GET['page'])) {
         $view = $_GET['page'];
+        $sideview = "sidebar";
     }else {
         $view = "login";
-        $sideview = "sidebar";
     }
 
     if (isset($_SESSION["user"]))
