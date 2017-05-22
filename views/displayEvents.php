@@ -11,7 +11,7 @@ $ajEvents = json_decode($asEvents);
 
 $allEvents = "
     <div class='filters'>
-    <h3>Filter by:</h3>
+    <h4>Filter by:</h4>
     <div class='filter-location'>Location</div>
     <i class=\"fa fa-ellipsis-v\" aria-hidden=\"true\"></i>
     <div class='filter-capacity'>Capacity</div>
