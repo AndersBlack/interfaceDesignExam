@@ -17,13 +17,13 @@
     <div id="wdw-sidebar">
         <div id="wdw-hello"><h4>Welcome <?php echo $user; ?></h4></div>
         <div id="wdw-view-list">
-            <a href=""><h5>All Events</h5></a>
-            <a href=""><h5>All Partners</h5></a>
-            <a href=""><h5>All Users</h5></a>
+            <a href="views/profile.php?page=displayEvents"><h5>All Events</h5></a>
+            <a href="views/profile.php?page=displayPartners"><h5>All Partners</h5></a>
+            <a href="views/profile.php?page=displayUsers"><h5>All Users</h5></a>
         </div>
         <div id="wdw-add-functions">
-            <a href=""><h5>Add Event</h5></a>
-            <a href=""><h5>Add User</h5></a>
+            <a href="views/profile.php?page=createEvent"><h5>Add Event</h5></a>
+            <a href="views/profile.php?page=createUserProfile"><h5>Add User</h5></a>
         </div>
     </div>
 </div>
