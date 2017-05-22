@@ -9,11 +9,24 @@
 $asEvents = file_get_contents("events.txt");
 $ajEvents = json_decode($asEvents);
 
-$allEvents="";
+$allEvents = "
+    <div class='filters'>
+    <h3>Filter by:</h3>
+    <div class='filter-location'>Location</div>
+    <i class=\"fa fa-ellipsis-v\" aria-hidden=\"true\"></i>
+    <div class='filter-capacity'>Capacity</div>
+    <i class=\"fa fa-ellipsis-v\" aria-hidden=\"true\"></i>
+    <div class='filter-theme'>Theme</div>
+    </div>
+    <div class='events'>".displayAllEvents($ajEvents)."</div>
+</div>
+";
 
-foreach($ajEvents as $jEvent)
-{
-    $allEvents.="<div class='event'>
+function displayAllEvents($ajEvents){
+    $event="";
+    foreach($ajEvents as $jEvent)
+    {
+        $event .= "<div class='event'>
         <div class='wdw-event-img'>
             <img src='$jEvent->image' alt='event image'>
         </div>
@@ -32,5 +45,8 @@ foreach($ajEvents as $jEvent)
             </div>
         </div>
     </div>";
+    }
+    return $event;
 }
+
 $content = $allEvents;
