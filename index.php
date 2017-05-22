@@ -10,9 +10,14 @@
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <?php
     session_start();
+
+    // Report all errors except E_NOTICE
+    error_reporting(E_ALL ^ E_NOTICE);
+
     if(isset($_GET['page'])) {
         $view = $_GET['page'];
         $sideview = "sidebar";
+        include_once "views/$sideview.php";
     }else {
         $view = "login";
     }
@@ -22,7 +27,7 @@
         $user = $_SESSION["user"];
     }
 
-    include_once "views/$sideview.php";
+
     include_once "views/$view.php";
     ?>
 </head>
