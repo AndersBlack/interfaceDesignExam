@@ -10,19 +10,19 @@ $asPartners = file_get_contents("partners.txt");
 $ajPartners = json_decode($asPartners);
 
 $allPartners = "
-    <div class='partners'>".displayAllEvents($ajPartners)."</div>
+    <div class='wdw-partners'>".displayAllPartners($ajPartners)."</div>
 </div>
 ";
 
-function displayAllEvents($ajPartners){
+function displayAllPartners($ajPartners){
     $partner="";
     foreach($ajPartners as $jPartner)
     {
         $partner .= "<div class='partner'>
-        <div class='wdw-event-img'>
+        <div class='partner-img'>
             <img src='$jPartner->image' alt='partner image'>
         </div>
-        <div class='wdw-partner-info'>
+        <div class='partner-info'>
             <h3>$jPartner->partnername</h3>
         </div>
         <div>

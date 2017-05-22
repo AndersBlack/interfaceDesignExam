@@ -6,4 +6,29 @@
  * Time: 15:55
  */
 
-$content = "These are all the users";
+$asUsers = file_get_contents("users.txt");
+$ajUsers = json_decode($asUsers);
+
+$allUsers = "
+    <div class='wdw-users'>".displayAllUsers($ajUsers)."</div>
+</div>
+";
+
+function displayAllUsers($ajUsers){
+    $user="";
+    foreach($ajUsers as $jUser)
+    {
+        $user .= "<div class='user'>
+        <div class='user-info'>
+            <h4>$jUser->username</h4>
+            <p>Title: $jUser->title</p>
+        </div>
+        <div class='user-events'>
+        <h5>$jUser->event</h5>
+        </div>
+    </div>";
+    }
+    return $user;
+}
+
+$content = $allUsers;
