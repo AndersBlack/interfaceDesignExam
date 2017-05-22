@@ -28,7 +28,7 @@ foreach($ajEvents as $jEvent)
             </div>
             <div>
                 <h5>$jEvent->date</h5>
-                <h5>$jEvent->capacity</h5>
+                <h5>Capacity: $jEvent->capacity</h5>
             </div>
         </div>
     </div>";
