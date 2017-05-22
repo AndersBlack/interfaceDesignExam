@@ -13,8 +13,14 @@ body {
   height: 100vh;
   padding: 20px;
   box-shadow: 5px 0px 5px #888888;
-  border-right: #01243b 1.5px solid;
-  width: 14%; }
+  width: 14%;
+  background-color: #01243b; }
+
+#wdw-sidebar div h4 {
+  color: whitesmoke !important; }
+
+#wdw-sidebar div a h5 {
+  color: whitesmoke !important; }
 
 h1, h2, h3, h4, h5, p {
   color: #01243b !important; }
@@ -92,5 +98,29 @@ h1, h5, h4, h3, h2, p {
   align-items: center;
   justify-content: center;
   flex-direction: row; }
+
+.wdw-users {
+  flex-direction: row;
+  display: flex; }
+
+.user {
+  width: 15%;
+  display: flex;
+  margin: 20px;
+  flex-direction: row;
+  border: #01243b 1.5px solid; }
+
+.user-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center; }
+
+.user-info p {
+  margin-bottom: 0px !important;
+  margin-left: 5px; }
+
+.user-events {
+  display: none; }
 
 /*# sourceMappingURL=style.css.map */
