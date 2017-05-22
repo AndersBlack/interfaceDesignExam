@@ -13,7 +13,7 @@
 
     // Report all errors except E_NOTICE
     error_reporting(E_ALL ^ E_NOTICE);
-
+    $user = new stdClass();
     if(isset($_GET['page'])) {
         $view = $_GET['page'];
         $sideview = "sidebar";
