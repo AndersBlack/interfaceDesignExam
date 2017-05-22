@@ -13,19 +13,15 @@
 </head>
 <body>
 
-<div id="content">
-    <div id="wdw-sidebar">
-        <div id="wdw-hello"><h4>Welcome <?php echo $user; ?></h4></div>
-        <div id="wdw-view-list">
-            <a href="views/profile.php?page=displayEvents"><h5>All Events</h5></a>
-            <a href="views/profile.php?page=displayPartners"><h5>All Partners</h5></a>
-            <a href="views/profile.php?page=displayUsers"><h5>All Users</h5></a>
-        </div>
-        <div id="wdw-add-functions">
-            <a href="views/profile.php?page=createEvent"><h5>Add Event</h5></a>
-            <a href="views/profile.php?page=createUserProfile"><h5>Add User</h5></a>
-        </div>
-    </div>
+<div class="wdw-event-details">
+    <h2></h2>
+    <p></p>
+    <h3></h3>
+    <h3>Partner:</h3>
+    <h4></h4>
+    <h3>Responsible:</h3>
+    <h4></h4>
+    <button class="btn btn-primary">Edit event</button>
 </div>
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>

@@ -20,7 +20,7 @@ function displayAllPartners($ajPartners){
     {
         $partner .= "<div class='partner'>
         <div class='partner-img'>
-            <img src='$jPartner->image' alt='partner image'>
+            <img src='$jPartner->image' class='img-circle' alt='partner image'>
         </div>
         <div class='partner-info'>
             <h3>$jPartner->partnername</h3>
