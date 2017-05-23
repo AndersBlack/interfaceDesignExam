@@ -29,7 +29,7 @@
      "responsible":"B",
      "image":"http://www.winefoodemiliaromagna.com/sites/default/files/styles/event_detail/public/events/Prosciutto_di_Parma.jpg?itok=W1SGepW3",
      "partner":"Arla",
-     "location":"Aarhus",
+     "location":"Frederiksberg",
      "theme":"Wine and dine",
      "description":"Welcome to the greatest show on earth! Ham from every corner of the world! Come one, come all!",
      "date":"11/6/2017",
