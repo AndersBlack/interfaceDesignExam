@@ -7,7 +7,7 @@ $options = [];
 foreach ( $jData as $jObject) {
     $options[$jObject['username']];
     //echo '<jObject username=' . $jObject->id . '>'. $jObject->username . '</jObject>';
-   // echo $jObject->username;
+   // echo $jObject->username performer;
     
 };
 
