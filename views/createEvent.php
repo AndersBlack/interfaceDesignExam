@@ -46,7 +46,6 @@ foreach ( $ajUsers as $jUser) {
 $content .="<!--<input type=\"text\" class=\"createEvent form-control\">-->
             </select>
         </div>
-
         <div class=\"wdw-createEvent-InputArea\">
             <label>Picture of the Event:</label>
             <input type=\"text\" class=\"createEvent form-control\" id=\"lbl-pictureEvent\">
