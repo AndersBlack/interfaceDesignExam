@@ -22,15 +22,15 @@ foreach($ajEvents as $jEvent)
             <img src='$jEvent->image' class='img-circle' alt='event image'>
         </div>
         <h2>$jEvent->eventname</h2>
-        <h3>$jEvent->date</h3>
+        <p>$jEvent->date</p>
         <p>$jEvent->description</p>
-        <h3>Theme:</h3>
+        <p>Theme:</p>
         <h4>$jEvent->theme</h4>
-        <h3>Capacity:</h3>
+        <p>Capacity:</p>
         <h4>$jEvent->capacity</h4>
-        <h3>Partner:</h3>
+        <p>Partner:</p>
         <h4>$jEvent->partner</h4>
-        <h3>Responsible:</h3>
+        <p>Responsible:</p>
         <h4>$jEvent->responsible</h4>
         <button class='btn btn-primary'>Edit event</button>
     </div>";

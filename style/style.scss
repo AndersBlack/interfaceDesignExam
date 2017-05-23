@@ -92,6 +92,27 @@ h1, h5, h4, h3, h2, p {
   padding: 5px;
 }
 
+.details-img img{
+  height: 300px;
+  width: 300px;
+}
+
+.wdw-event-details {
+  padding: 30px;
+}
+
+.btn-primary{
+  background-color: #01243b !important;
+}
+
+a:focus, a:hover {
+  text-decoration: none !important;
+}
+
+h3 {
+  text-decoration: none !important;
+}
+
 .wdw-partners {
   display: flex;
 }
