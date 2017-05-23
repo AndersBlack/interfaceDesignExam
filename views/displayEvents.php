@@ -13,11 +13,11 @@ $allEvents = "
     
     <div class='wdw-filters'>
     <h4>Filter by:</h4>
-    <div class='filter-location'>Location</div>
+    <div class='filter-location'><a href='index.php?page=filter&value=location'>Location</a></div>
     <i class=\"fa fa-ellipsis-v\" aria-hidden=\"true\"></i>
-    <div class='filter-capacity'>Capacity</div>
+    <div class='filter-capacity'><a href='index.php?page=filter&value=capacity'>Capacity</a></div>
     <i class=\"fa fa-ellipsis-v\" aria-hidden=\"true\"></i>
-    <div class='filter-theme'>Theme</div>
+    <div class='filter-theme'><a href='index.php?page=filter&value=theme'>Theme</a></div>
     </div>
     <div class='wdw-events'>".displayAllEvents($ajEvents)."</div>
 </div>
