@@ -1,4 +1,17 @@
 <?php
+echo '<select>';
+$users = file_get_contents("../users.txt");
+$jData = json_decode($users);
+
+
+foreach ( $jData as $jObject) {
+
+    echo '<jObject username=' . $jObject->id . '>'. $jObject->username . '</jObject>';
+   // echo $jObject->username;
+    
+}
+
+echo '</select>';
 
 
 $content = "<div class=\"wdw-createEvent\">
@@ -35,7 +48,7 @@ $content = "<div class=\"wdw-createEvent\">
         <div class=\"wdw-createEvent-InputArea\">
             <label>Manager of the Event:</label>
             <select id=\"drp-users\">
-            <!--<input type=\"text\" class=\"createEvent form-control\">-->
+              <!--<input type=\"text\" class=\"createEvent form-control\">-->
             </select>
         </div>
 
