@@ -19,6 +19,17 @@ $sidebarcode = "<div id=\"wdw-sidebar\">
             <a href=\"index.php?page=createEvent\"><h5>Add Event</h5></a>
             <a href=\"index.php?page=createUserProfile\"><h5>Add User</h5></a>
         </div>
-    </div>";
+    </div>
+            <div class=\"dropdown\">
+          <button class=\"btn btn-primary dropdown-toggle\" type=\"button\" data-toggle=\"dropdown\">Menu
+          <span class=\"caret\"></span></button>
+          <ul class=\"dropdown-menu\">
+            <li><a href=\"index.php?page=displayEvents\">All Events</a></li>
+            <li><a href=\"index.php?page=displayPartners\">All Partners</a></li>
+            <li><a href=\"index.php?page=displayUsers\">All Users</a></li>
+            <li><a href=\"index.php?page=createEvent\">Add Event</a></li>
+            <li><a href=\"index.php?page=createUserProfile\">Add User</a></li>
+          </ul>
+        </div>";
 
 ?>

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>AmazingApp</title>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- Google font -->
     <link href="https://fonts.googleapis.com/css?family=Comfortaa:300,400,700" rel="stylesheet">
     <!-- Font Awesome -->
