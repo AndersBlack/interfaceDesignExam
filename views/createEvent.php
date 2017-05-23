@@ -5,9 +5,9 @@ $jData = json_decode($users);
 $options = [];
 
 foreach ( $jData as $jObject) {
-    $options[$jObject['username']];
+    //$options[$jObject['username']];
     //echo '<jObject username=' . $jObject->id . '>'. $jObject->username . '</jObject>';
-   // echo $jObject->username performer;
+    //echo $jObject->username;
     
 };
 
@@ -50,8 +50,9 @@ $content = "<div class=\"wdw-createEvent\">
             <label>Manager of the Event:</label>
             <select id=\"drp-users\">
               <!--<input type=\"text\" class=\"createEvent form-control\">-->
+              <option>Default</option>
             </select>
-        </div>
+        </div>  
 
         <div class=\"wdw-createEvent-InputArea\">
             <label>Picture of the Event:</label>
@@ -80,7 +81,7 @@ $content = "<div class=\"wdw-createEvent\">
 //        var fieldTheme = $("#lbl-themeEventEvent").val();
 //        var fieldDate = $("#lbl-dateEventEvent").val();
 //        var fieldEvent = $("#lbl-Event").val();
-//        var fielDescription = $("#lbl-descriptionEvent").val();
+//        var fieldDescription = $("#lbl-descriptionEvent").val();
 //        var fieldPartner = $("#lbl-partnerEvent").val();
 //        var fieldCapacity = $("#lbl-capacityEvent").val();
 //        var fieldManager = $("#drp-users").val();
@@ -88,4 +89,15 @@ $content = "<div class=\"wdw-createEvent\">
 //
 //
 //    });
+
+//jQuery(function(){
+//    $.getJSON('createEvent.php', function(data) {
+//            var select = $('#drp-users');
+//        $.each(data, function(key, val){
+//            $('<option/>').attr('value', val.version)
+//            .html('version ' + val.version)
+//            .appendTo(select);
+//        });
+//    });
+//});
 //</script>
