@@ -2,14 +2,15 @@
 
 $users = file_get_contents("../users.txt");
 $jData = json_decode($users);
-
+$options = [];
 
 foreach ( $jData as $jObject) {
-
-    echo '<jObject username=' . $jObject->id . '>'. $jObject->username . '</jObject>';
+    $options[$jObject['username']];
+    //echo '<jObject username=' . $jObject->id . '>'. $jObject->username . '</jObject>';
    // echo $jObject->username;
     
-}
+};
+
 
 
 
@@ -63,8 +64,7 @@ $content = "<div class=\"wdw-createEvent\">
     </form>
 
 </div>";
-
-//<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    //<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 //<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 //<script>
 //$( function() {
