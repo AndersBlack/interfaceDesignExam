@@ -1,5 +1,5 @@
 <?php
-echo '<select>';
+
 $users = file_get_contents("../users.txt");
 $jData = json_decode($users);
 
@@ -11,7 +11,7 @@ foreach ( $jData as $jObject) {
     
 }
 
-echo '</select>';
+
 
 
 $content = "<div class=\"wdw-createEvent\">
