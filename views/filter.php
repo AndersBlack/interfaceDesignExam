@@ -17,13 +17,10 @@ foreach($ajEvents as $jEvent)
 }
 $uniqueFilterValues = array_unique($allFilterValues);
 
-
-
-
 $content ="
         <div class='wdw-filtered-events'>
             <h1>$filter</h1>
-            <div class='wdw-events'>".displayAllEvents($uniqueFilterValues, $ajEvents, $filter)."</div>
+            <div class='wdw-ordered-events'>".displayAllEvents($uniqueFilterValues, $ajEvents, $filter)."</div>
         </div>
 
 ";
