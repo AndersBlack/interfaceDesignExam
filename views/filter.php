@@ -19,7 +19,7 @@ $uniqueFilterValues = array_unique($allFilterValues);
 
 $content ="
         <div class='wdw-filtered-events'>
-            <h1>$filter</h1>
+            <h4>Sorted by : $filter</h4>
             <div class='wdw-ordered-events'>".displayAllEvents($uniqueFilterValues, $ajEvents, $filter)."</div>
         </div>
 
@@ -31,20 +31,20 @@ function displayAllEvents($arrayOfFilters, $arrayOfEvents, $filter){
     {
         $body .= "
         <div class='filter'>
-        <h1>$singleFilter</h1>";
+        <h4>$singleFilter :</h4>";
         foreach($arrayOfEvents as $singleEvent)
         {
             if($singleEvent->$filter == $singleFilter)
             {
                 $body .="
                 <a href='?page=displayEventDetails&amp;event_id=$singleEvent->id'>
-                    <div class='event'>
-                        <div class='event-img'>
+                    <div class='event event-filtered'>
+                        <div class='event-img-filtered'>
                             <img src='$singleEvent->image' class='img-circle' alt='event image'>
                         </div>
                         <div class='event-info'>
                             <div>
-                                <h3>$singleEvent->eventname</h3>                     
+                                <h5>$singleEvent->eventname</h5>                     
                             </div>
                             <div>
                                 <h5>$singleEvent->date</h5>                       
