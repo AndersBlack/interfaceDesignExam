@@ -26,9 +26,9 @@ function displayAllPartners($ajPartners){
             <h3>$jPartner->partnername</h3>
         </div>
         <div>
-             <h5>Event</h5>
+             <h4>Event</h4>
              <p>$jPartner->event</p>
-             <h5>Role</h5>
+             <h4>Role</h4>
              <p>$jPartner->role</p>
         </div>
     </div>";
