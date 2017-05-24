@@ -274,6 +274,9 @@ h3 {
 .hide {
   display: none; }
 
+.form-join-event {
+  display: none; }
+
 /*--------------------- MOBILE ---------------------------*/
 @media screen and (max-width: 480px) {
   #wdw-sidebar {
