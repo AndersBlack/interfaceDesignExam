@@ -5,11 +5,23 @@
  * Date: 22/05/2017
  * Time: 21:17
  */
-
 $id = $_GET["event_id"];
-
+$user = $_SESSION['user'];
+$username = $user->username;
 $asEvents = file_get_contents("events.txt");
 $ajEvents = json_decode($asEvents);
+
+if(isset($_POST["cardNumber"]))
+{
+    foreach($ajEvents as $jEvent) {
+        if ($jEvent->id == $id) {
+            $jEvent->capacity--;
+
+            $asEvents = json_encode($ajEvents);
+            file_put_contents("events.txt", $asEvents);
+        }
+    }
+}
 
 $eventDetails = "";
 foreach($ajEvents as $jEvent)
@@ -47,6 +59,14 @@ foreach($ajEvents as $jEvent)
         <input type='submit' class='btn btn-primary $isShowing' value='Edit event'>
         <a class='btn btn-danger $isShowing' href='views/deleteEntry.php?entry=event&id=$jEvent->id'>Delete event</a>
         </form>
+        <input type='submit' class='btn-join-event btn btn-success $notShowing' value='Join event'>
+        <div class='wdw-join-event'>
+        <form method='post' action='index.php?page=displayEventDetails&event_id=$id' class='form-join-event'>
+        <input name='name' placeholder='name' type='text' value='$username'>
+        <input name='cardNumber' placeholder='credit card number' type='text'>
+        <input type='submit' value='Confirm'>
+        </form>
+        </div>
     </div>";
     }
 

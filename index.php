@@ -76,6 +76,10 @@
     $( function() {
         $( "#lbl-dateEvent" ).datepicker();
     } );
+
+    $(".btn-join-event").click(function(){
+
+    })
     </script>
 
     </body>
