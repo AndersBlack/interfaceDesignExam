@@ -36,6 +36,7 @@ if (isset($_POST['nameOfEvent'])){
 
     $asEvents = json_encode($ajEvents);
     file_put_contents("events.txt", $asEvents);
+    header("Location: index.php?page=displayEvents");
 
 
 }

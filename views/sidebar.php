@@ -27,8 +27,8 @@ $sidebarcode = "<div id=\"wdw-sidebar\" class='$Color'>
         </div>
         <div class='btn-admin-func $isShowing $Color'>+</div>
     <div class='admin-func grow'>
-        <button class='btn btn-success' href='index.php?page=createEvent'>Add Event</button>
-        <button class='btn btn-success' href='index.php?page=createUserProfile'>Add User</button>
+        <a class='btn btn-success form-control' href='index.php?page=createEvent'>Add Event</a>
+        <a class='btn btn-success form-control' href='index.php?page=createUserProfile'>Add User</a>
     </div>
     </div>";
 

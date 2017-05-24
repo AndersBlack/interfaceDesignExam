@@ -46,9 +46,13 @@ foreach($ajEvents as $jEvent)
         <p>Theme:</p>
         <h4>$jEvent->theme</h4>
         <input name='theme' type='hidden' value='$jEvent->theme'>
-        <p>Capacity:</p>
-        <h4>$jEvent->capacity</h4>
-        <input name='capacity' type='hidden' value='$jEvent->capacity'>
+        <p>Capacity:</p>";
+        if ($jEvent->capacity > 0){
+            $eventDetails.="<h4>$jEvent->capacity</h4>";
+        }else{
+            $eventDetails.="<h4 class='text-danger'>SOLD OUT</h4>";
+        }
+    $eventDetails.=" <input name='capacity' type='hidden' value='$jEvent->capacity'>
         <p>Partner:</p>
         <h4>$jEvent->partner</h4>
         <input name='partner' type='hidden' value='$jEvent->partner'>
@@ -58,9 +62,11 @@ foreach($ajEvents as $jEvent)
         <input name='id' type='hidden' value='$jEvent->id'>
         <input type='submit' class='btn btn-primary $isShowing' value='Edit event'>
         <a class='btn btn-danger $isShowing' href='views/deleteEntry.php?entry=event&id=$jEvent->id'>Delete event</a>
-        </form>
-        <input type='submit' class='btn-join-event btn btn-success $notShowing' value='Join event'>
-        <div class='wdw-join-event'>
+        </form>";
+        if($jEvent->capacity>0){
+            $eventDetails.=" <input type='submit' class='btn-join-event btn btn-success $notShowing' value='Join event'>";
+        }
+        $eventDetails.="<div class='wdw-join-event'>
         <form method='post' action='index.php?page=displayEventDetails&event_id=$id' class='form-join-event'>
         <input class='form-control' name='name' placeholder='name' type='text' value='$username'>
         <input class='form-control' name='cardNumber' placeholder='credit card number' type='text'>
