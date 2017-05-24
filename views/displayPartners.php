@@ -10,6 +10,7 @@ $asPartners = file_get_contents("partners.txt");
 $ajPartners = json_decode($asPartners);
 
 $allPartners = "
+    <h3 class='txt-showing'>All Partners :</h3>
     <div class='wdw-partners'>".displayAllPartners($ajPartners)."</div>
 </div>
 ";
