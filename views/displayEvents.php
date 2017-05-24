@@ -20,7 +20,13 @@ $allEvents = "
     <div class='filter-theme'><a href='index.php?page=filter&value=theme'>Theme</a></div>
     </div>
     <div class='wdw-events'>".displayAllEvents($ajEvents)."</div>
-</div>
+    <div class='btn-admin-func'>+</div>
+    <div class='admin-func grow'>
+        <button class='btn btn-success'>Add Event</button>
+        <button class='btn btn-success'>Add User</button>
+    </div>
+    </div>
+    
 
 ";
 

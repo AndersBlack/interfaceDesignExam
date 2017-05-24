@@ -186,6 +186,49 @@ h3 {
 .dropdown {
   display: none; }
 
+.btn-admin-func {
+  border-radius: 25px 25px 25px 25px;
+  background-color: #01243b;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: x-large;
+  position: fixed;
+  bottom: 20px;
+  right: 20px; }
+
+.admin-func {
+  transition: all .4s ease-in-out;
+  border-radius: 5px 5px 5px 5px;
+  height: 140px;
+  width: 160px;
+  padding: 30px;
+  background-color: #01243b;
+  align-content: center;
+  justify-content: center;
+  overflow: hidden;
+  position: fixed;
+  bottom: 45px;
+  right: 45px;
+  transform-origin: bottom right;
+  transform: scale(0); }
+
+.btn-admin-func:hover + .admin-func {
+  transform: scale(1);
+  position: fixed;
+  bottom: 20px;
+  right: 20px; }
+
+.admin-func:hover {
+  transform: scale(1); }
+
+.admin-func button {
+  width: 100px;
+  margin-bottom: 10px; }
+
 /*--------------------- MOBILE ---------------------------*/
 @media screen and (max-width: 480px) {
   #wdw-sidebar {
