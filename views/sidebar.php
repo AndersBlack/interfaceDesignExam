@@ -8,7 +8,7 @@
 // Report all errors except E_NOTICE
 error_reporting(E_ALL ^ E_NOTICE);
 
-$sidebarcode = "<div id=\"wdw-sidebar\">
+$sidebarcode = "<div id=\"wdw-sidebar\" class='$Color'>
         <div id=\"wdw-hello\"><h4>Welcome ".$user->username."</h4></div>
         <div id=\"wdw-view-list\">
             <a href=\"index.php?page=displayEvents\"><h5>All Events</h5></a>
@@ -25,7 +25,7 @@ $sidebarcode = "<div id=\"wdw-sidebar\">
             <li><a href=\"index.php?page=displayUsers\">All Users</a></li>
           </ul>
         </div>
-        <div class='btn-admin-func $isShowing'>+</div>
+        <div class='btn-admin-func $isShowing $Color'>+</div>
     <div class='admin-func grow'>
         <button class='btn btn-success' href='index.php?page=createEvent'>Add Event</button>
         <button class='btn btn-success' href='index.php?page=createUserProfile'>Add User</button>

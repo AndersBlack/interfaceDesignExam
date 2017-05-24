@@ -30,8 +30,11 @@
 
         if($user->admin == 1){
             $isShowing = "showing";
+            $Color = "adminColor";
+            $notShowing = "hide";
         }else{
            $isShowing = "hide";
+           $Color = "userColor";
         }
     }
     if(isset($_GET['page'])) {
