@@ -20,7 +20,7 @@ body {
   background-color: #01243b; }
 
 .userColor {
-  background-color: #4A148C; }
+  background-color: #E65100; }
 
 #wdw-sidebar div h4 {
   color: whitesmoke !important; }
@@ -90,7 +90,8 @@ h1, h5, h4, h3, h2, p, label, .btn {
   transition: all 0.3s ease; }
 
 .event-info div h3 {
-  margin-top: 5px; }
+  margin-top: 5px;
+  color: #01243b; }
 
 .details-img img {
   height: 300px;
@@ -251,7 +252,7 @@ h3 {
 .admin-func:hover {
   transform: scale(1); }
 
-.admin-func button {
+.admin-func a {
   width: 100px;
   margin-bottom: 10px; }
 
@@ -276,6 +277,15 @@ h3 {
 
 .form-join-event {
   display: none; }
+
+.wdw-join-event {
+  margin-top: 10px; }
+
+.wdw-createUser {
+  padding: 30px; }
+
+.createUser {
+  margin-bottom: 10px; }
 
 /*--------------------- MOBILE ---------------------------*/
 @media screen and (max-width: 480px) {
@@ -312,6 +322,17 @@ h3 {
   .event-details-description {
     width: 80%;
     margin-top: 10px !important;
-    margin-bottom: 10px !important; } }
+    margin-bottom: 10px !important; }
+
+  #drp-users {
+    margin-left: 0px; }
+
+  .wdw-event-details {
+    padding: 20px; }
+
+  .filter {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; } }
 
 /*# sourceMappingURL=style.css.map */

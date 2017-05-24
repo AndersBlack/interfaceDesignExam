@@ -26,7 +26,7 @@ body{
 }
 
 .userColor {
-  background-color: #4A148C;
+  background-color: #E65100;
 }
 
 #wdw-sidebar div h4 {
@@ -116,6 +116,7 @@ h1, h5, h4, h3, h2, p, label, .btn {
 
 .event-info div h3 {
   margin-top: 5px;
+  color: #01243b;
 }
 
 .details-img img{
@@ -313,7 +314,7 @@ h3 {
   transform: scale(1);
 }
 
-.admin-func button {
+.admin-func a {
   width: 100px;
   margin-bottom: 10px;
 }
@@ -345,6 +346,18 @@ h3 {
 
 .form-join-event {
   display: none;
+}
+
+.wdw-join-event {
+  margin-top: 10px;
+}
+
+.wdw-createUser{
+  padding: 30px;
+}
+
+.createUser {
+  margin-bottom: 10px;
 }
 
 /*--------------------- MOBILE ---------------------------*/
@@ -395,5 +408,19 @@ h3 {
     width: 80%;
     margin-top: 10px !important;
     margin-bottom: 10px !important;
+  }
+
+  #drp-users {
+    margin-left: 0px;
+  }
+
+  .wdw-event-details{
+    padding: 20px;
+  }
+
+  .filter {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }
