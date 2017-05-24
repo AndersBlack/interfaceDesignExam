@@ -15,6 +15,7 @@ if (isset($_POST['nameOfEvent'])){
     $partnerOfEvent = $_POST['partnerOfEvent'];
     $capacityOfEvent = $_POST['capacityOfEvent'];
     $pictureOfEvent = $_POST['pictureOfEvent'];
+    $responsibleForEvent = $_POST['managerOfEvent'];
 
     $asEvents = file_get_contents("events.txt");
     $ajEvents= json_decode($asEvents);
@@ -29,6 +30,7 @@ if (isset($_POST['nameOfEvent'])){
     $newEvent->partner = $partnerOfEvent;
     $newEvent->capacity = $capacityOfEvent;
     $newEvent->image = $pictureOfEvent;
+    $newEvent->responsible = $responsibleForEvent;
 
     array_push($ajEvents , $newEvent);
 
