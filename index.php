@@ -25,6 +25,14 @@
     if (isset($_SESSION["user"]))
     {
         $user = $_SESSION["user"];
+        $username = $user->username;
+        checkForAdmin("users.txt",$username,$user);
+
+        if($user->admin == 1){
+            $isShowing = "showing";
+        }else{
+           $isShowing = "hide";
+        }
     }
     if(isset($_GET['page'])) {
         $view = $_GET['page'];
@@ -34,6 +42,20 @@
         $view = "login";
     }
     include_once "views/$view.php";
+
+    function checkForAdmin($filename, $username, $user) {
+        $sArray = file_get_contents($filename);
+        $jArray = json_encode($sArray);
+
+        for ($i = 0; $i < count($jArray); $i++){
+            if($jArray[$i]->id == $username && $jArray[$i]->admin == 1){
+                $user->admin = 1;
+                break;
+            }
+        }
+
+    }
+
     ?>
 </head>
 <body>

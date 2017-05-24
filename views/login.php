@@ -5,7 +5,8 @@
  * Date: 22/05/2017
  * Time: 11:55
  */
-
+session_destroy();
+session_unset();
 
 if(isset($_GET["username"], $_GET["password"]))
 {

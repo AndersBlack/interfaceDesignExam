@@ -25,7 +25,7 @@ $sidebarcode = "<div id=\"wdw-sidebar\">
             <li><a href=\"index.php?page=displayUsers\">All Users</a></li>
           </ul>
         </div>
-        <div class='btn-admin-func'>+</div>
+        <div class='btn-admin-func $isShowing'>+</div>
     <div class='admin-func grow'>
         <button class='btn btn-success' href='index.php?page=createEvent'>Add Event</button>
         <button class='btn btn-success' href='index.php?page=createUserProfile'>Add User</button>

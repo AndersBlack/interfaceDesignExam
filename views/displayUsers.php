@@ -25,7 +25,7 @@ function displayAllUsers($ajUsers){
             <p>Title: $jUser->title</p>
         </div>
         <div class='user-events'>
-        <h5>$jUser->event</h5>
+        <h5>Working on : $jUser->event</h5>
         </div>
     </div>";
     }

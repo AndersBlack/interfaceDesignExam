@@ -44,8 +44,8 @@ foreach($ajEvents as $jEvent)
         <h4>$jEvent->responsible</h4>
         <input name='responsible' type='hidden' value='$jEvent->responsible'>
         <input name='id' type='hidden' value='$jEvent->id'>
-        <input type='submit' class='btn btn-primary' value='Edit event'>
-        <a class='btn btn-danger' href='views/deleteEntry.php?entry=event&id=$jEvent->id'>Delete event</a>
+        <input type='submit' class='btn btn-primary $isShowing' value='Edit event'>
+        <a class='btn btn-danger $isShowing' href='views/deleteEntry.php?entry=event&id=$jEvent->id'>Delete event</a>
         </form>
     </div>";
     }

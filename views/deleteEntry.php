@@ -19,7 +19,7 @@ function deleteEntry($fileName, $id)
     $sArray = file_get_contents($fileName);
     $jArray = json_decode($sArray);
 
-    for ($i = 0; $i <count($jArray); $i++){
+    for ($i = 0; $i < count($jArray); $i++){
         if($jArray[$i]->id == $id){
             array_splice($jArray, $i, 1);
         }
