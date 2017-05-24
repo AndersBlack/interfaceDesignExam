@@ -19,7 +19,7 @@ if(isset($_GET["username"], $_GET["password"]))
         {
             session_start();
             $_SESSION["user"] = $jUser;
-            header("Location: index.php?page=profile");
+            header("Location: index.php?page=displayEvents");
         }
         else
         {

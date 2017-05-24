@@ -8,14 +8,27 @@
 $id = $_GET["event_id"];
 $user = $_SESSION['user'];
 $username = $user->username;
+$userId = $user->id;
 $asEvents = file_get_contents("events.txt");
 $ajEvents = json_decode($asEvents);
+$asUsers = file_get_contents("users.txt");
+$ajUsers = json_decode($asUsers);
 
 if(isset($_POST["cardNumber"]))
 {
     foreach($ajEvents as $jEvent) {
         if ($jEvent->id == $id) {
             $jEvent->capacity--;
+            for($i=0; $i<count($ajUsers); $i++)
+            {
+                if ($ajUsers[$i]->id == $userId)
+                {
+                    array_push($ajUsers[$i]->events, $jEvent->id);
+                    $asUsers = json_encode($ajUsers);
+                    file_put_contents("users.txt",$asUsers);
+                    $_SESSION["user"]=$ajUsers[$i];
+                }
+            }
 
             $asEvents = json_encode($ajEvents);
             file_put_contents("events.txt", $asEvents);
@@ -64,7 +77,7 @@ foreach($ajEvents as $jEvent)
         <a class='btn btn-danger $isShowing' href='views/deleteEntry.php?entry=event&id=$jEvent->id'>Delete event</a>
         </form>";
         if($jEvent->capacity>0){
-            $eventDetails.=" <input type='submit' class='btn-join-event btn btn-success $notShowing' value='Join event'>";
+            $eventDetails.="<input type='submit' class='btn-join-event btn btn-success $notShowing' value='Join event'>";
         }
         $eventDetails.="<div class='wdw-join-event'>
         <form method='post' action='index.php?page=displayEventDetails&event_id=$id' class='form-join-event'>
