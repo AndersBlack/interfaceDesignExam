@@ -30,11 +30,11 @@ body{
   color: whitesmoke !important;
 }
 
-h1, h2, h3, h4, h5, p {
+h1, h2, h3, h4, h5, p, label {
   color: #01243b !important;
 }
 
-h1, h5, h4, h3, h2, p {
+h1, h5, h4, h3, h2, p, label, .btn {
   font-family: 'Comfortaa', cursive !important;
 }
 
@@ -67,6 +67,7 @@ h1, h5, h4, h3, h2, p {
   display: flex;
   flex-direction: row;
   padding: 10px;
+  padding-left: 20px;
   align-items: center;
   //justify-content: space-around;
 }
@@ -83,15 +84,31 @@ h1, h5, h4, h3, h2, p {
   margin-top: 30px;
 }
 
+.wdw-events a {
+  margin-bottom: 10px;
+}
+
 .event {
   width: 230px;
   height: auto;
   padding: 3px;
-  border: #01243b 1.5px solid;
+  // border: #01243b 1.5px solid;
+}
+
+.event:hover .event-info{
+  box-shadow: inset 0 7px 9px -7px #01243b;
 }
 
 .event-info {
   padding: 5px;
+  border-top: #01243b 1.5px solid;
+  margin-top: 10px;
+  transition:all 0.3s ease;
+;
+}
+
+.event-info div h3 {
+  margin-top: 5px;
 }
 
 .details-img img{
@@ -279,6 +296,23 @@ h3 {
 .admin-func button {
   width: 100px;
   margin-bottom: 10px;
+}
+
+.wdw-createEvent {
+  padding: 50px;
+}
+
+.wdw-createEvent-InputArea {
+  margin-top: 20px;
+}
+
+#drp-users {
+  width: 150px;
+  margin-left: 20px;
+}
+
+.txt-showing {
+  padding-left: 20px;
 }
 
 /*--------------------- MOBILE ---------------------------*/
