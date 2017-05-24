@@ -10,6 +10,7 @@ $asUsers = file_get_contents("users.txt");
 $ajUsers = json_decode($asUsers);
 
 $allUsers = "
+    <h3 class='txt-showing'>All Users :</h3>
     <div class='wdw-users'>".displayAllUsers($ajUsers)."</div>
 </div>
 ";

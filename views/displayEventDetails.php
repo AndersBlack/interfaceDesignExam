@@ -24,7 +24,7 @@ foreach($ajEvents as $jEvent)
         <h2>$jEvent->eventname</h2>
         <p>$jEvent->date</p>
         <p>$jEvent->location</p>
-        <p>$jEvent->description</p>
+        <p class='event-details-description'>$jEvent->description</p>
         <p>Theme:</p>
         <h4>$jEvent->theme</h4>
         <p>Capacity:</p>
