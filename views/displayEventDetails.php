@@ -62,9 +62,9 @@ foreach($ajEvents as $jEvent)
         <input type='submit' class='btn-join-event btn btn-success $notShowing' value='Join event'>
         <div class='wdw-join-event'>
         <form method='post' action='index.php?page=displayEventDetails&event_id=$id' class='form-join-event'>
-        <input name='name' placeholder='name' type='text' value='$username'>
-        <input name='cardNumber' placeholder='credit card number' type='text'>
-        <input type='submit' value='Confirm'>
+        <input class='form-control' name='name' placeholder='name' type='text' value='$username'>
+        <input class='form-control' name='cardNumber' placeholder='credit card number' type='text'>
+        <input class='btn btn-primary' type='submit' value='Confirm'>
         </form>
         </div>
     </div>";

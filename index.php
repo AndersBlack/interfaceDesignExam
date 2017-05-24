@@ -78,7 +78,7 @@
     } );
 
     $(".btn-join-event").click(function(){
-
+        $(".form-join-event").css("display","flex");
     })
     </script>
 
