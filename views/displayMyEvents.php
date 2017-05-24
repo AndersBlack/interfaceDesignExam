@@ -29,6 +29,7 @@ foreach($user->events as $eventId)
                 </div>
             </div>
         </a>";
+
     }
 
 }
