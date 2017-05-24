@@ -7,7 +7,7 @@ if (isset($_POST['createUser'])){
     $username= $_POST['createUser'];
     $asUsers = file_get_contents("users.txt");
     $ajUsers = json_decode($asUsers);
-
+    //
     $newUser = new stdClass();
 
     $newUser->id = getGUID();
