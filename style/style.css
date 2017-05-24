@@ -276,6 +276,7 @@ h3 {
   display: none; }
 
 .form-join-event {
+  transition: all .4s ease-in-out;
   display: none; }
 
 .wdw-join-event {
