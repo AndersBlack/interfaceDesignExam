@@ -18,6 +18,7 @@ body{
   box-shadow: 5px 0px 5px #888888;
  // border-right: #01243b 1.5px solid;
   width: 14%;
+  min-width:150px;
 
 }
 
@@ -351,6 +352,9 @@ h3 {
 
 .wdw-join-event {
   margin-top: 10px;
+  form{
+    flex-direction:column;
+  }
 }
 
 .wdw-createUser{

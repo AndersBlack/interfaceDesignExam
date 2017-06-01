@@ -69,21 +69,21 @@ foreach($ajEvents as $jEvent)
         <p>Partner:</p>
         <h4>$jEvent->partner</h4>
         <input name='partner' type='hidden' value='$jEvent->partner'>
-        <p>Responsible:</p>
-        <h4>$jEvent->responsible</h4>
+        <p class='$isShowing'>Responsible:</p>
+        <h4 class='$isShowing'>$jEvent->responsible</h4>
         <input name='responsible' type='hidden' value='$jEvent->responsible'>
         <input name='id' type='hidden' value='$jEvent->id'>
         <input type='submit' class='btn btn-primary $isShowing' value='Edit event'>
         <a class='btn btn-danger $isShowing' href='views/deleteEntry.php?entry=event&id=$jEvent->id'>Delete event</a>
         </form>";
-        if($jEvent->capacity>0){
+        if($jEvent->capacity>0 && !isset($_POST['cardNumber'])){
             $eventDetails.="<input type='submit' class='btn-join-event btn btn-success $notShowing' value='Join event'>";
         }
         $eventDetails.="<div class='wdw-join-event'>
         <form method='post' action='index.php?page=displayEventDetails&event_id=$id' class='form-join-event'>
         <input class='form-control' name='name' placeholder='name' type='text' value='$username'>
         <input class='form-control' name='cardNumber' placeholder='credit card number' type='text'>
-        <input class='btn btn-primary' type='submit' value='Confirm'>
+        <input class='btn btn-success' type='submit' value='Confirm'>
         </form>
         </div>
     </div>";
