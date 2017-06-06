@@ -15,6 +15,8 @@
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <!--  Date and time CSS  -->
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="node_modules/sweetalert/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="node_modules/sweetalert/dist/sweetalert.css">
 
     <?php
     session_start();
@@ -33,8 +35,8 @@
             $Color = "adminColor";
             $notShowing = "hide";
         }else{
-           $isShowing = "hide";
-           $Color = "userColor";
+            $isShowing = "hide";
+            $Color = "userColor";
         }
     }
     if(isset($_GET['page'])) {
@@ -42,7 +44,10 @@
         $sideview = "sidebar";
         include_once "views/$sideview.php";
     }else {
-        $view = "login";
+        $view = "displayEvents";
+        $sideview = "sidebar";
+
+        include_once "views/$sideview.php";
     }
     include_once "views/$view.php";
 
@@ -78,7 +83,27 @@
     } );
 
     $(".btn-join-event").click(function(){
-        $(".form-join-event").css("display","flex");
+        $.ajax({
+            "url":"views/isUserLoggedIn.php",
+            "method":"get",
+            "dataType":"json"
+        }).done(function(jData){
+            if(jData.status == "logged"){
+                $(".form-join-event").css("display","flex");
+            } else {
+                swal({
+                    title: "Please log in to join event!",
+                    confirmButtonColor: "#5cb85c",
+                    confirmButtonText: "Log in",
+                    html: true
+            },
+                    function(){
+                        window.location.href ='views/login.php';
+                    });
+
+            }
+        });
+
     })
     </script>
 

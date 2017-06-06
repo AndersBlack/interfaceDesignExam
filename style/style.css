@@ -14,8 +14,7 @@ body {
   height: 100vh;
   padding: 20px;
   box-shadow: 5px 0px 5px #888888;
-  width: 14%;
-  min-width: 150px; }
+  width: 14%; }
 
 .adminColor {
   background-color: #01243b; }
@@ -23,7 +22,7 @@ body {
 .userColor {
   background-color: #E65100; }
 
-#wdw-sidebar div h4 {
+#wdw-sidebar div h4, h5 {
   color: whitesmoke !important; }
 
 #wdw-sidebar div a h5 {
@@ -282,8 +281,6 @@ h3 {
 
 .wdw-join-event {
   margin-top: 10px; }
-  .wdw-join-event form {
-    flex-direction: column; }
 
 .wdw-createUser {
   padding: 30px; }
