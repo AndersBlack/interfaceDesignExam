@@ -18,6 +18,7 @@ $sidebarcode = "<div id=\"wdw-sidebar\" class='$Color'>
             <a class='$isShowing' href=\"index.php?page=displayUsers\"><h5>All Users</h5></a>
             <a class='$notShowing' href='index.php?page=displayMyEvents&id=$userId'><h5>My Events</h5></a>
         </div>
+        <div> <a href='index.php?page=logout'><h5>Log out</h5></a></div>
     </div>
             <div class=\"dropdown\">
           <button class=\"btn btn-primary dropdown-toggle\" type=\"button\" data-toggle=\"dropdown\">Menu
@@ -27,6 +28,7 @@ $sidebarcode = "<div id=\"wdw-sidebar\" class='$Color'>
             <li><a href=\"index.php?page=displayPartners\">All Partners</a></li>
             <li><a class='$isShowing' href=\"index.php?page=displayUsers\">All Users</a></li>
             <li><a class='$notShowing' href='index.php?page=displayMyEvents'>My Events</a></li>
+            <li><a href='index.php?page=logout'>Log out</a></li>
           </ul>
         </div>
         <div class='btn-admin-func $isShowing $Color'>+</div>

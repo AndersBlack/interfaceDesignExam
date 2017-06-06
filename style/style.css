@@ -35,6 +35,7 @@ h1, h5, h4, h3, h2, p, label, .btn {
   font-family: 'Comfortaa', cursive !important; }
 
 #wdw-view-list {
+  height: 65%;
   margin-top: 100px;
   margin-bottom: 100px; }
 
@@ -107,6 +108,9 @@ h1, h5, h4, h3, h2, p, label, .btn {
   background-color: #01243b !important; }
 
 a:focus, a:hover {
+  text-decoration: none !important; }
+
+a {
   text-decoration: none !important; }
 
 .wdw-partners h4 {

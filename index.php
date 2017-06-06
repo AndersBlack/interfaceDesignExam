@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>AmazingApp</title>
+    <title>Anvil</title>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- Google font -->
@@ -24,11 +24,15 @@
     // Report all errors except E_NOTICE
     error_reporting(E_ALL ^ E_NOTICE);
     $user = new stdClass();
-    if (isset($_SESSION["user"]))
+
+    if (isset($_SESSION["user"], $_GET['page']))
     {
+        $view = $_GET['page'];
         $user = $_SESSION["user"];
         $username = $user->username;
         checkForAdmin("users.txt",$username,$user);
+        $sideview = "sidebar";
+
 
         if($user->admin == 1){
             $isShowing = "showing";
@@ -38,17 +42,36 @@
             $isShowing = "hide";
             $Color = "userColor";
         }
-    }
-    if(isset($_GET['page'])) {
-        $view = $_GET['page'];
-        $sideview = "sidebar";
-        include_once "views/$sideview.php";
-    }else {
+        include "views/$sideview.php";
+    } else if (isset($_SESSION["user"]) && !isset($_GET["page"])){
         $view = "displayEvents";
+        $user = $_SESSION["user"];
+        $username = $user->username;
+        checkForAdmin("users.txt",$username,$user);
         $sideview = "sidebar";
-        $Color = "userColor";
+
+
+        if($user->admin == 1){
+            $isShowing = "showing";
+            $Color = "adminColor";
+            $notShowing = "hide";
+        }else{
+            $isShowing = "hide";
+            $Color = "userColor";
+        }
+        include "views/$sideview.php";
+    }
+    else if(!isset($_SESSION["user"]) && isset($_GET['page'])) {
+        $view = $_GET['page'];
         $sideview = "sidebarNoSess";
-        include_once "views/$sideview.php";
+        $Color = "userColor";
+        include "views/$sideview.php";
+    }
+    else if(!isset($_SESSION["user"],$_GET["page"])){
+        $view = "displayEvents";
+        $sideview = "sidebarNoSess";
+        $Color = "userColor";
+        include "views/$sideview.php";
     }
     include_once "views/$view.php";
 

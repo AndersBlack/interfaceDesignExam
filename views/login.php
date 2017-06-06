@@ -32,7 +32,7 @@ $content =
 <html lang=\"en\">
 <head>
     <meta charset=\"UTF-8\">
-    <title>AmazingApp</title>
+    <title>Anvil</title>
 
     <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js\"></script>
     <!-- Google font -->
@@ -40,15 +40,16 @@ $content =
     <!-- Font Awesome -->
     <link href=\"https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css\" rel=\"stylesheet\" integrity=\"sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN\" crossorigin=\"anonymous\">
     <!-- Our stylesheet -->
-    <link rel=\"stylesheet\" type=\"text/css\" href=\"style/style.css\">
+    <link rel=\"stylesheet\" type=\"text/css\" href=\"../style/style.css\">
     <!-- Bootstrap stylesheet -->
     <link rel=\"stylesheet\" type=\"text/css\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\">
     <!--  Date and time CSS  -->
     <link rel=\"stylesheet\" href=\"//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css\">
-    <script src=\"node_modules/sweetalert/dist/sweetalert.min.js\"></script>
-    <link rel=\"stylesheet\" type=\"text/css\" href=\"node_modules/sweetalert/dist/sweetalert.css\">
+    <script src=\"../node_modules/sweetalert/dist/sweetalert.min.js\"></script>
+    <link rel=\"stylesheet\" type=\"text/css\" href=\"../node_modules/sweetalert/dist/sweetalert.css\">
 </head>
-<body>
+<div>
+<div id=\"content\">
 <div id=\"wdw-login-master\">
 <div class=\"wdw-login-text\">
     <h1>Welcome to Anvil</h1>
@@ -64,6 +65,10 @@ $content =
     </div>
     </div>
     </div>
+    </div>
+    <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js\"></script>
+<script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js\"></script>
+<script src=\"https://code.jquery.com/ui/1.12.1/jquery-ui.js\"></script>
 </body>
 ";
 echo $content;
