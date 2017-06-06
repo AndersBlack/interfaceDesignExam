@@ -46,7 +46,8 @@
     }else {
         $view = "displayEvents";
         $sideview = "sidebar";
-
+        $Color = "userColor";
+        $sideview = "sidebarNoSess";
         include_once "views/$sideview.php";
     }
     include_once "views/$view.php";
