@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>AmazingApp</title>
+    <title>Anvil</title>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- Google font -->
@@ -15,6 +15,8 @@
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <!--  Date and time CSS  -->
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="node_modules/sweetalert/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="node_modules/sweetalert/dist/sweetalert.css">
 
     <?php
     session_start();
@@ -22,27 +24,54 @@
     // Report all errors except E_NOTICE
     error_reporting(E_ALL ^ E_NOTICE);
     $user = new stdClass();
-    if (isset($_SESSION["user"]))
+
+    if (isset($_SESSION["user"], $_GET['page']))
     {
+        $view = $_GET['page'];
         $user = $_SESSION["user"];
         $username = $user->username;
         checkForAdmin("users.txt",$username,$user);
+        $sideview = "sidebar";
+
 
         if($user->admin == 1){
             $isShowing = "showing";
             $Color = "adminColor";
             $notShowing = "hide";
         }else{
-           $isShowing = "hide";
-           $Color = "userColor";
+            $isShowing = "hide";
+            $Color = "userColor";
         }
-    }
-    if(isset($_GET['page'])) {
-        $view = $_GET['page'];
+        include "views/$sideview.php";
+    } else if (isset($_SESSION["user"]) && !isset($_GET["page"])){
+        $view = "displayEvents";
+        $user = $_SESSION["user"];
+        $username = $user->username;
+        checkForAdmin("users.txt",$username,$user);
         $sideview = "sidebar";
-        include_once "views/$sideview.php";
-    }else {
-        $view = "login";
+
+
+        if($user->admin == 1){
+            $isShowing = "showing";
+            $Color = "adminColor";
+            $notShowing = "hide";
+        }else{
+            $isShowing = "hide";
+            $Color = "userColor";
+        }
+        include "views/$sideview.php";
+    }
+    else if(!isset($_SESSION["user"]) && isset($_GET['page'])) {
+        $view = $_GET['page'];
+        $sideview = "sidebarNoSess";
+        $Color = "userColor";
+        include "views/$sideview.php";
+    }
+    else if(!isset($_SESSION["user"],$_GET["page"])){
+        $view = "displayEvents";
+        $sideview = "sidebarNoSess";
+        $Color = "userColor";
+        include "views/$sideview.php";
     }
     include_once "views/$view.php";
 
@@ -78,7 +107,27 @@
     } );
 
     $(".btn-join-event").click(function(){
-        $(".form-join-event").css("display","flex");
+        $.ajax({
+            "url":"views/isUserLoggedIn.php",
+            "method":"get",
+            "dataType":"json"
+        }).done(function(jData){
+            if(jData.status == "logged"){
+                $(".form-join-event").css("display","flex");
+            } else {
+                swal({
+                    title: "Please log in to join event!",
+                    confirmButtonColor: "#5cb85c",
+                    confirmButtonText: "Log in",
+                    html: true
+            },
+                    function(){
+                        window.location.href ='views/login.php';
+                    });
+
+            }
+        });
+
     })
     </script>
 
