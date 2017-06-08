@@ -18,10 +18,10 @@ $sidebarcode = "<div id=\"wdw-sidebar\" class='$Color'>
             <a class='$isShowing' href=\"index.php?page=displayUsers\"><h5>All Users</h5></a>
             <a class='$notShowing' href='index.php?page=displayMyEvents&id=$userId'><h5>My Events</h5></a>
         </div>
-        <div> <a href='index.php?page=logout'><h5>Log out</h5></a></div>
+        <div class='btn-logout-wrapper'><a href='index.php?page=logout'><h5>Log out</h5></a></div>
     </div>
             <div class=\"dropdown\">
-          <button class=\"btn btn-primary dropdown-toggle\" type=\"button\" data-toggle=\"dropdown\">Menu
+          <button class=\"btn dropdown-toggle $Color\" type=\"button\" data-toggle=\"dropdown\">Menu
           <span class=\"caret\"></span></button>
           <ul class=\"dropdown-menu\">
             <li><a href=\"index.php?page=displayEvents\">All Events</a></li>

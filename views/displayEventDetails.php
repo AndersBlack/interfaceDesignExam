@@ -13,6 +13,17 @@ $asEvents = file_get_contents("events.txt");
 $ajEvents = json_decode($asEvents);
 $asUsers = file_get_contents("users.txt");
 $ajUsers = json_decode($asUsers);
+$join = false;
+
+
+foreach($user->events as $event)
+{
+    if ($event == $id)
+    {
+        $join = true;
+    }
+
+}
 
 if(isset($_POST["cardNumber"]))
 {
@@ -27,6 +38,7 @@ if(isset($_POST["cardNumber"]))
                     $asUsers = json_encode($ajUsers);
                     file_put_contents("users.txt",$asUsers);
                     $_SESSION["user"]=$ajUsers[$i];
+
                 }
             }
 
@@ -78,7 +90,7 @@ foreach($ajEvents as $jEvent)
         <a class='btn btn-danger $isShowing' href='views/deleteEntry.php?entry=event&id=$jEvent->id'>Delete event</a>";
         }
     $eventDetails.="</form>";
-        if($jEvent->capacity>0){
+        if($jEvent->capacity>0 && $join == false){
             $eventDetails.="<input type='submit' class='btn-join-event btn btn-success $notShowing' value='Join event'>";
         }
         $eventDetails.="<div class='wdw-join-event'>

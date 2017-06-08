@@ -1,10 +1,13 @@
+$adminColor:#01243b;
+$userColor:#E65100;
+
 #content {
   display: flex;
   flex-direction: column;
   height: 100vh;
   width: 100vw;
   background-color: whitesmoke;
-  overflow: scroll;
+
 }
 
 body{
@@ -18,25 +21,27 @@ body{
   box-shadow: 5px 0px 5px #888888;
  // border-right: #01243b 1.5px solid;
   width: 14%;
+  min-width:200px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
 
 }
 
 .adminColor {
-  background-color: #01243b;
+  background-color: $adminColor;
 }
 
 .userColor {
-  background-color: #E65100;
+  background-color: $userColor;
 }
 
-#wdw-sidebar div h4,h5 {
-  color: whitesmoke !important;
-
+#wdw-sidebar {
+  a,h3,h4,h5{
+    color: whitesmoke !important;
+  }
 }
 
-#wdw-sidebar div a h5 {
-  color: whitesmoke !important;
-}
 
 h1, h2, h3, h4, h5, p, label {
   color: #01243b;
@@ -50,6 +55,7 @@ h1, h5, h4, h3, h2, p, label, .btn {
   height:65%;
   margin-top: 100px;
   margin-bottom: 100px;
+
 
 }
 
@@ -66,9 +72,13 @@ h1, h5, h4, h3, h2, p, label, .btn {
   margin-right: 10px;
 }
 
-.event-img img {
+.event-img {
   height: 220px;
   width: 220px;
+  background-size:200%;
+  background-repeat:no-repeat;
+  background-position:center;
+
 }
 
 .wdw-filters{
@@ -91,12 +101,18 @@ h1, h5, h4, h3, h2, p, label, .btn {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  align-content:space-between !important;
   margin-top: 30px;
+  height:100%;
+  a{
+    margin-bottom: 10px;
+    width:20%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+  }
 }
 
-.wdw-events a {
-  margin-bottom: 10px;
-}
 
 .event {
   width: 230px;
@@ -114,7 +130,7 @@ h1, h5, h4, h3, h2, p, label, .btn {
   border-top: #01243b 1.5px solid;
   margin-top: 10px;
   transition:all 0.3s ease;
-;
+
 }
 
 .event-info div h3 {
@@ -277,6 +293,9 @@ h3 {
 .dropdown {
   display: none;
 }
+.dropdown-toggle{
+  color:whitesmoke;
+}
 
 .btn-admin-func {
   border-radius: 25px 25px 25px 25px;
@@ -323,6 +342,28 @@ h3 {
 .admin-func a {
   width: 100px;
   margin-bottom: 10px;
+}
+.btn-login-wrapper {
+  position: fixed;
+  top: 20px;
+  right: 0;
+  width:5%;
+  height:4%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background-color: $userColor !important;
+  min-width:80px;
+  :hover{
+    color:white;
+  }
+  a{
+    background-color: $userColor !important;
+    color: whitesmoke;
+    :hover{
+      color:white;
+    }
+  }
 }
 
 .wdw-createEvent {
@@ -373,7 +414,10 @@ h3 {
   #wdw-sidebar {
     display: none;
   }
-
+  .btn-login-wrapper {
+    position:fixed;
+    top: 43px;
+  }
   .dropdown {
     display: flex;
   }

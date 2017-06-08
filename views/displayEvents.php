@@ -10,7 +10,7 @@ $asEvents = file_get_contents("events.txt");
 $ajEvents = json_decode($asEvents);
 
 $allEvents = "
-    
+    <h3 class='txt-showing'>All events : </h3>
     <div class='wdw-filters'>
     <h4>Filter by:</h4>
     <div class='filter-location'><a href='index.php?page=filter&value=location'>Location</a></div>
@@ -32,9 +32,7 @@ function displayAllEvents($ajEvents){
         $event .= "
         <a href='?page=displayEventDetails&amp;event_id=$jEvent->id'>
             <div class='event'>
-                <div class='event-img'>
-                    <img src='$jEvent->image' class='img-circle' alt='event image'>
-                </div>
+                <div style='background-image:url($jEvent->image)' class='event-img img-circle'></div>
                 <div class='event-info'>
                     <div>
                         <h3>$jEvent->eventname</h3>                     

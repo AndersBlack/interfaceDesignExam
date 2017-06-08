@@ -7,7 +7,7 @@ $asEvents = file_get_contents("events.txt");
 $ajEvents = json_decode($asEvents);
 
 
-$event="<h3 class='txt-showing'>Your events : </h3>
+$event="<h3 class='txt-showing'>My events : </h3>
         <div class='wdw-events'>";
 foreach($user->events as $eventId)
 {

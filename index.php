@@ -128,6 +128,9 @@
             }
         });
 
+    });
+    $("#wdw-view-list a h5").click(function(){
+        $(this).addClass("active");
     })
     </script>
 
