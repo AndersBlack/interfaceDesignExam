@@ -1,7 +1,6 @@
 #content {
   display: flex;
   flex-direction: column;
-  height: 100vh;
   width: 86%;
   margin-left: 14%;
   background-color: whitesmoke; }
