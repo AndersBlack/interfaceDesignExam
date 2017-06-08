@@ -16,9 +16,7 @@ foreach($user->events as $eventId)
         $event .= "
         <a href='?page=displayEventDetails&amp;event_id=$jEvent->id'>
             <div class='event'>
-                <div class='event-img'>
-                    <img src='$jEvent->image' class='img-circle' alt='event image'>
-                </div>
+                <div style='background-image:url($jEvent->image)' class='event-img img-circle'></div>
                 <div class='event-info'>
                     <div>
                         <h3>$jEvent->eventname</h3>                     

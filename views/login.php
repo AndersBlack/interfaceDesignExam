@@ -6,7 +6,7 @@
  * Time: 11:55
  */
 
-
+$errorMessage = "";
 if(isset($_GET["username"], $_GET["password"]))
 {
     $asUsers = file_get_contents("../users.txt");
@@ -19,12 +19,12 @@ if(isset($_GET["username"], $_GET["password"]))
             session_start();
             $_SESSION["user"] = $jUser;
             header("Location: ../index.php");
+        } else {
+            $errorMessage = "<div>User not found</div>";
         }
-        else
-        {
-            echo "user not found";
-        }
+
     }
+
 }
 
 $content =
@@ -48,8 +48,8 @@ $content =
     <script src=\"../node_modules/sweetalert/dist/sweetalert.min.js\"></script>
     <link rel=\"stylesheet\" type=\"text/css\" href=\"../node_modules/sweetalert/dist/sweetalert.css\">
 </head>
-<div>
-<div id=\"content\">
+
+
 <div id=\"wdw-login-master\">
 <div class=\"wdw-login-text\">
     <h1>Welcome to Anvil</h1>
@@ -60,12 +60,14 @@ $content =
         <input type=\"text\" name=\"username\" id=\"lbl-username\" class=\"form-control\" placeholder=\"username\">
         <input type=\"text\" name=\"password\" id=\"lbl-password\" class=\"form-control\" placeholder=\"password\">
         <input type=\"submit\" id=\"btn-login-submit\" class=\"btn btn-primary\" value=\"Login\">
+        
     </form>
+    <div class='login-error-message'><h5>$errorMessage</h5></div>
     <h3>Admin user : Username a , Password 1 . Regular user : Username b , Password 2</h3>
     </div>
     </div>
-    </div>
-    </div>
+
+   
     <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js\"></script>
 <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js\"></script>
 <script src=\"https://code.jquery.com/ui/1.12.1/jquery-ui.js\"></script>

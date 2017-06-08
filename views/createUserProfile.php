@@ -17,6 +17,7 @@ if (isset($_POST['username'])){
     $newUser->password = $password;
     $newUser->title = $title;
     $newUser->admin = 1;
+    $newUser->events=[];
 
 
     array_push($ajUsers , $newUser);
