@@ -5,7 +5,8 @@ $userColor:#E65100;
   display: flex;
   flex-direction: column;
   height: 100vh;
-  width: 100vw;
+  width: 86%;
+  margin-left:14%;
   background-color: whitesmoke;
 
 }
@@ -18,13 +19,13 @@ body{
 #wdw-sidebar {
   height: 100vh;
   padding: 20px;
-  box-shadow: 5px 0px 5px #888888;
  // border-right: #01243b 1.5px solid;
   width: 14%;
   min-width:200px;
   display:flex;
   flex-direction:column;
   justify-content:space-between;
+  position:fixed;
 
 }
 
