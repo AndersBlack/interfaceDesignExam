@@ -89,7 +89,7 @@ $content .="<!--<input type=\"text\" class=\"createEvent form-control\">-->
             <input type=\"text\" class=\"createEvent form-control\" id=\"lbl-pictureEvent\" name='pictureOfEvent'>
         </div>
         <div class=\"wdw-createEvent-InputArea\">
-            <input type=\"submit\" class=\"btn btn-primary\" id=\"btn-submitEvent\" value=\"Create event\">
+            <input type=\"submit\" class=\"btn btn-primary\" id=\"btn-submitEvent\" value=\"Add event\">
         </div>
 
     </form>

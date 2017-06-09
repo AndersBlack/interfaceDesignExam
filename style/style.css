@@ -219,6 +219,9 @@ h3 {
   .wdw-event-details form {
     width: 20%; }
 
+.form-join-event {
+  width: 100% !important; }
+
 .wdw-filtered-events {
   margin-left: 20px;
   padding-bottom: 20px; }

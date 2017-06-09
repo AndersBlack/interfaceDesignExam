@@ -38,7 +38,7 @@ if(isset($_POST["cardNumber"]))
                     $asUsers = json_encode($ajUsers);
                     file_put_contents("users.txt",$asUsers);
                     $_SESSION["user"]=$ajUsers[$i];
-
+                    $join = true;
                 }
             }
 
