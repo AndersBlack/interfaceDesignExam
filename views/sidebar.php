@@ -34,7 +34,7 @@ $sidebarcode = "<div id=\"wdw-sidebar\" class='$Color'>
         <div class='btn-admin-func $isShowing $Color'>+</div>
     <div class='admin-func grow'>
         <a class='btn btn-success form-control' href='index.php?page=createEvent'>Add Event</a>
-        <a class='btn btn-success form-control' href='index.php?page=createUserProfile'>Add User</a>
+        <a class='btn btn-success form-control' href='index.php?page=createUserProfile'>Add Admin</a>
     </div>
     </div>";
 

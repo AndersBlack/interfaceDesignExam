@@ -35,11 +35,11 @@ $content = "<div class=\"wdw-createUser\">
     <form method='post'>
 
         <div class=\"wdw-createEvent-InputArea\">
-            <label>Create admin account</label>
+            <label>Add a new admin account</label>
             <input type=\"text\" class=\"createUser form-control\" id=\"lbl-username\" name=\"username\" placeholder='username'>
             <input type=\"text\" class=\"createUser form-control\" id=\"lbl-password\" name=\"password\" placeholder='password'>
             <input type='text' class='createUser form-control' name='title' placeholder='title'> 
-            <input type=\"submit\" class=\"btn btn-primary\" id=\"btn-submitEvent\" value=\"Create User\">
+            <input type=\"submit\" class=\"btn btn-primary\" id=\"btn-submitEvent\" value=\"Add Admin\">
         </div>
        
 
